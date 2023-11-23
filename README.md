@@ -1,6 +1,7 @@
 # Coerced Potato Reflective DLL
 
 Privilege escalation from NT Service to SYSTEM using SeImpersonateToken privilege and MS-RPRN functions.
+
 Heavily based on https://github.com/Prepouce/CoercedPotato
 
 
@@ -29,5 +30,5 @@ beacon> CoercedPotato coerce
 ```
 
 <p align="center">
-  <img src="img/poc.png">
+  <img src="images/poc.png">
 </p>
